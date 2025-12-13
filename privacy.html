@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BudgetZen</title>
+    <style>
+        :root {
+            --primary: #6366F1;
+            --primary-dark: #4F46E5;
+            --secondary: #F9FAFB;
+            --text: #111827;
+            --text-secondary: #6B7280;
+            --border: #E5E7EB;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .language-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            justify-content: center;
+            background: var(--secondary);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid var(--border);
+        }
+        
+        .language-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .language-btn:hover, .language-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .language-content {
+            display: none;
+        }
+        
+        .language-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 30px 0 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: var(--text);
+            margin: 25px 0 15px;
+            font-size: 1.3em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: var(--text);
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            background: #F0FDF4;
+            border-left: 4px solid #10B981;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight p {
+            margin: 0;
+            color: #065F46;
+            font-weight: 500;
+        }
+        
+        .warning {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning p {
+            margin: 0;
+            color: #92400E;
+            font-weight: 500;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+        
+        .contact-info {
+            background: #E0F2FE;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid #0EA5E9;
+        }
+        
+        .contact-info h3 {
+            color: #0C4A6E;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔒 BudgetZen Privacy Policy</h1>
+        <p>Your privacy is our priority. Available in 6 languages.</p>
+    </div>
+    
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        
+        <div class="language-selector" id="languageSelector">
+            <button class="language-btn active" data-lang="en">🇬🇧 English</button>
+            <button class="language-btn" data-lang="fr">🇫🇷 Français</button>
+            <button class="language-btn" data-lang="de">🇩🇪 Deutsch</button>
+            <button class="language-btn" data-lang="es">🇪🇸 Español</button>
+            <button class="language-btn" data-lang="it">🇮🇹 Italiano</button>
+            <button class="language-btn" data-lang="pt">🇵🇹 Português</button>
+        </div>
+        
+        <!-- English Version -->
+        <div class="language-content active" id="content-en">
+            <div class="content">
+                <h2>Privacy Policy for BudgetZen</h2>
+                <p><strong>Last Updated:</strong> January 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Important Notice:</strong> BudgetZen is a 100% local application. All your data stays on your device. We don't collect, store, or transmit any personal information.</p>
+                </div>
+                
+                <h3>1. Data Collection & Storage</h3>
+                <p><strong>No Data Collection:</strong> BudgetZen does not collect, transmit, or store any personal data on external servers. All your financial information remains exclusively on your device.</p>
+                
+                <p><strong>Local Storage Only:</strong> The following data is stored locally on your device:</p>
+                <ul>
+                    <li>Financial transactions (income and expenses)</li>
+                    <li>Budget limits and categories</li>
+                    <li>Project goals and savings targets</li>
+                    <li>Application preferences (theme, currency, language)</li>
+                    <li>Premium purchase status (managed by Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Backup Responsibility:</strong> Since all data is stored locally, you are responsible for backing up your device. We recommend regular backups through your device's backup system.</p>
+                </div>
+                
+                <h3>2. Premium Features & In-App Purchases</h3>
+                <p><strong>Google Play Store:</strong> All premium purchases (subscriptions and one-time purchases) are processed through Google Play Store. We do not handle payment information.</p>
+                
+                <p><strong>Purchase Data:</strong> Google Play provides us with anonymous purchase verification data only (purchase status, product ID, expiration date). No personal payment information is shared with us.</p>
+                
+                <h3>3. Account Information</h3>
+                <p><strong>No Account Required:</strong> BudgetZen does not require user accounts. There is no registration, login, or password system.</p>
+                
+                <p><strong>No Email Collection:</strong> We do not collect email addresses, names, or any personal identifiers.</p>
+                
+                <h3>4. Permissions & Device Access</h3>
+                <p>BudgetZen may request the following permissions:</p>
+                <ul>
+                    <li><strong>Storage Access:</strong> To export data as CSV/Excel files</li>
+                    <li><strong>Notifications:</strong> To send budget alerts and reminders</li>
+                    <li><strong>Internet (optional):</strong> Only for Google Play purchase verification</li>
+                </ul>
+                
+                <p>All permissions are optional and clearly explained when requested.</p>
+                
+                <h3>5. Third-Party Services</h3>
+                <p><strong>Google Play Services:</strong> Used only for:</p>
+                <ul>
+                    <li>Processing in-app purchases</li>
+                    <li>Purchase restoration when changing devices</li>
+                    <li>Subscription management</li>
+                </ul>
+                
+                <p>We do not use analytics services, advertising networks, or tracking tools.</p>
+                
+                <h3>6. Data Security</h3>
+                <p><strong>Device Security:</strong> Your data is protected by your device's built-in security (encryption, lock screen).</p>
+                
+                <p><strong>No External Transmission:</strong> Financial data never leaves your device, not even in encrypted form.</p>
+                
+                <h3>7. Children's Privacy</h3>
+                <p>BudgetZen is not directed to children under 13. We do not knowingly collect any information from children.</p>
+                
+                <h3>8. Changes to This Policy</h3>
+                <p>We may update this privacy policy. Changes will be reflected on this page with an updated "Last Updated" date.</p>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>For questions about this privacy policy, contact us at:</p>
+                    <p><strong>Email:</strong> support@budgetzen.app</p>
+                    <p><strong>Website:</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">BudgetZen Legal Pages</a></p>
+                </div>
+                
+                <p>This privacy policy complies with GDPR, CCPA, and other privacy regulations.</p>
+            </div>
+        </div>
+        
+        <!-- French Version -->
+        <div class="language-content" id="content-fr">
+            <div class="content">
+                <h2>Politique de confidentialité de BudgetZen</h2>
+                <p><strong>Dernière mise à jour :</strong> Janvier 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Note importante :</strong> BudgetZen est une application 100% locale. Toutes vos données restent sur votre appareil. Nous ne collectons, ne stockons ni ne transmettons aucune information personnelle.</p>
+                </div>
+                
+                <h3>1. Collecte et stockage des données</h3>
+                <p><strong>Aucune collecte de données :</strong> BudgetZen ne collecte, ne transmet ni ne stocke de données personnelles sur des serveurs externes. Toutes vos informations financières restent exclusivement sur votre appareil.</p>
+                
+                <p><strong>Stockage local uniquement :</strong> Les données suivantes sont stockées localement sur votre appareil :</p>
+                <ul>
+                    <li>Transactions financières (revenus et dépenses)</li>
+                    <li>Limites de budget et catégories</li>
+                    <li>Objectifs de projet et cibles d'épargne</li>
+                    <li>Préférences de l'application (thème, devise, langue)</li>
+                    <li>Statut d'achat premium (géré par Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Responsabilité de sauvegarde :</strong> Étant donné que toutes les données sont stockées localement, vous êtes responsable de la sauvegarde de votre appareil. Nous recommandons des sauvegardes régulières via le système de sauvegarde de votre appareil.</p>
+                </div>
+                
+                <h3>2. Fonctionnalités Premium et achats intégrés</h3>
+                <p><strong>Google Play Store :</strong> Tous les achats premium (abonnements et achats uniques) sont traités via Google Play Store. Nous ne gérons pas les informations de paiement.</p>
+                
+                <p><strong>Données d'achat :</strong> Google Play nous fournit uniquement des données de vérification d'achat anonymes (statut d'achat, ID produit, date d'expiration). Aucune information de paiement personnelle n'est partagée avec nous.</p>
+                
+                <h3>3. Informations de compte</h3>
+                <p><strong>Aucun compte requis :</strong> BudgetZen ne nécessite pas de compte utilisateur. Il n'y a pas de système d'inscription, de connexion ou de mot de passe.</p>
+                
+                <p><strong>Aucune collecte d'email :</strong> Nous ne collectons pas d'adresses email, de noms ou d'identifiants personnels.</p>
+                
+                <h3>4. Permissions et accès à l'appareil</h3>
+                <p>BudgetZen peut demander les permissions suivantes :</p>
+                <ul>
+                    <li><strong>Accès au stockage :</strong> Pour exporter les données en fichiers CSV/Excel</li>
+                    <li><strong>Notifications :</strong> Pour envoyer des alertes de budget et des rappels</li>
+                    <li><strong>Internet (optionnel) :</strong> Uniquement pour la vérification d'achat Google Play</li>
+                </ul>
+                
+                <p>Toutes les permissions sont optionnelles et clairement expliquées lorsqu'elles sont demandées.</p>
+                
+                <h3>5. Services tiers</h3>
+                <p><strong>Services Google Play :</strong> Utilisés uniquement pour :</p>
+                <ul>
+                    <li>Le traitement des achats intégrés</li>
+                    <li>La restauration des achats lors du changement d'appareil</li>
+                    <li>La gestion des abonnements</li>
+                </ul>
+                
+                <p>Nous n'utilisons pas de services d'analyse, de réseaux publicitaires ni d'outils de suivi.</p>
+                
+                <h3>6. Sécurité des données</h3>
+                <p><strong>Sécurité de l'appareil :</strong> Vos données sont protégées par la sécurité intégrée de votre appareil (chiffrement, écran de verrouillage).</p>
+                
+                <p><strong>Aucune transmission externe :</strong> Les données financières ne quittent jamais votre appareil, même sous forme chiffrée.</p>
+                
+                <h3>7. Confidentialité des enfants</h3>
+                <p>BudgetZen n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons volontairement aucune information auprès d'enfants.</p>
+                
+                <h3>8. Modifications de cette politique</h3>
+                <p>Nous pouvons mettre à jour cette politique de confidentialité. Les modifications seront reflétées sur cette page avec une date de "Dernière mise à jour" mise à jour.</p>
+                
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    <p>Pour toute question concernant cette politique de confidentialité, contactez-nous à :</p>
+                    <p><strong>Email :</strong> support@budgetzen.app</p>
+                    <p><strong>Site web :</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">Pages légales de BudgetZen</a></p>
+                </div>
+                
+                <p>Cette politique de confidentialité est conforme au RGPD, au CCPA et autres réglementations sur la confidentialité.</p>
+            </div>
+        </div>
+        
+        <!-- German Version -->
+        <div class="language-content" id="content-de">
+            <div class="content">
+                <h2>Datenschutzrichtlinie für BudgetZen</h2>
+                <p><strong>Zuletzt aktualisiert:</strong> Januar 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Wichtiger Hinweis:</strong> BudgetZen ist eine 100% lokale Anwendung. Alle Ihre Daten bleiben auf Ihrem Gerät. Wir sammeln, speichern oder übertragen keine persönlichen Informationen.</p>
+                </div>
+                
+                <h3>1. Datenerfassung und -speicherung</h3>
+                <p><strong>Keine Datenerfassung:</strong> BudgetZen erfasst, überträgt oder speichert keine persönlichen Daten auf externen Servern. Alle Ihre Finanzinformationen bleiben ausschließlich auf Ihrem Gerät.</p>
+                
+                <p><strong>Nur lokale Speicherung:</strong> Die folgenden Daten werden lokal auf Ihrem Gerät gespeichert:</p>
+                <ul>
+                    <li>Finanztransaktionen (Einnahmen und Ausgaben)</li>
+                    <li>Budgetgrenzen und Kategorien</li>
+                    <li>Projektziele und Sparziele</li>
+                    <li>Anwendungseinstellungen (Thema, Währung, Sprache)</li>
+                    <li>Premium-Kaufstatus (verwaltet von Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Sicherungsverantwortung:</strong> Da alle Daten lokal gespeichert sind, sind Sie für die Sicherung Ihres Geräts verantwortlich. Wir empfehlen regelmäßige Backups über das Backup-System Ihres Geräts.</p>
+                </div>
+                
+                <h3>2. Premium-Funktionen & In-App-Käufe</h3>
+                <p><strong>Google Play Store:</strong> Alle Premium-Käufe (Abonnements und Einmalkäufe) werden über Google Play Store verarbeitet. Wir verarbeiten keine Zahlungsinformationen.</p>
+                
+                <p><strong>Kaufdaten:</strong> Google Play stellt uns nur anonyme Kaufverifizierungsdaten zur Verfügung (Kaufstatus, Produkt-ID, Ablaufdatum). Keine persönlichen Zahlungsinformationen werden mit uns geteilt.</p>
+                
+                <h3>3. Kontoinformationen</h3>
+                <p><strong>Kein Konto erforderlich:</strong> BudgetZen benötigt keine Benutzerkonten. Es gibt kein Registrierungs-, Login- oder Passwortsystem.</p>
+                
+                <p><strong>Keine E-Mail-Erfassung:</strong> Wir erfassen keine E-Mail-Adressen, Namen oder persönliche Identifikatoren.</p>
+                
+                <h3>4. Berechtigungen & Gerätezugriff</h3>
+                <p>BudgetZen kann folgende Berechtigungen anfordern:</p>
+                <ul>
+                    <li><strong>Speicherzugriff:</strong> Zum Exportieren von Daten als CSV/Excel-Dateien</li>
+                    <li><strong>Benachrichtigungen:</strong> Zum Senden von Budgetwarnungen und Erinnerungen</li>
+                    <li><strong>Internet (optional):</strong> Nur für Google Play-Kaufverifizierung</li>
+                </ul>
+                
+                <p>Alle Berechtigungen sind optional und werden bei Anforderung klar erklärt.</p>
+                
+                <h3>5. Drittanbieterdienste</h3>
+                <p><strong>Google Play-Dienste:</strong> Werden nur verwendet für:</p>
+                <ul>
+                    <li>Verarbeitung von In-App-Käufen</li>
+                    <li>Wiederherstellung von Käufen bei Gerätewechsel</li>
+                    <li>Abonnementverwaltung</li>
+                </ul>
+                
+                <p>Wir verwenden keine Analyse-Dienste, Werbenetzwerke oder Tracking-Tools.</p>
+                
+                <h3>6. Datensicherheit</h3>
+                <p><strong>Gerätesicherheit:</strong> Ihre Daten sind durch die integrierte Sicherheit Ihres Geräts geschützt (Verschlüsselung, Sperrbildschirm).</p>
+                
+                <p><strong>Keine externe Übertragung:</strong> Finanzdaten verlassen Ihr Gerät nie, nicht einmal in verschlüsselter Form.</p>
+                
+                <h3>7. Privatsphäre von Kindern</h3>
+                <p>BudgetZen ist nicht für Kinder unter 13 Jahren bestimmt. Wir sammeln wissentlich keine Informationen von Kindern.</p>
+                
+                <h3>8. Änderungen dieser Richtlinie</h3>
+                <p>Wir können diese Datenschutzrichtlinie aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten "Zuletzt aktualisiert"-Datum widergegeben.</p>
+                
+                <div class="contact-info">
+                    <h3>Kontaktinformationen</h3>
+                    <p>Bei Fragen zu dieser Datenschutzrichtlinie kontaktieren Sie uns unter:</p>
+                    <p><strong>E-Mail:</strong> support@budgetzen.app</p>
+                    <p><strong>Website:</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">BudgetZen Rechtliche Seiten</a></p>
+                </div>
+                
+                <p>Diese Datenschutzrichtlinie entspricht der DSGVO, CCPA und anderen Datenschutzbestimmungen.</p>
+            </div>
+        </div>
+        
+        <!-- Spanish Version -->
+        <div class="language-content" id="content-es">
+            <div class="content">
+                <h2>Política de Privacidad de BudgetZen</h2>
+                <p><strong>Última actualización:</strong> Enero 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Aviso importante:</strong> BudgetZen es una aplicación 100% local. Todos sus datos permanecen en su dispositivo. No recopilamos, almacenamos ni transmitimos ninguna información personal.</p>
+                </div>
+                
+                <h3>1. Recopilación y almacenamiento de datos</h3>
+                <p><strong>Sin recopilación de datos:</strong> BudgetZen no recopila, transmite ni almacena datos personales en servidores externos. Toda su información financiera permanece exclusivamente en su dispositivo.</p>
+                
+                <p><strong>Solo almacenamiento local:</strong> Los siguientes datos se almacenan localmente en su dispositivo:</p>
+                <ul>
+                    <li>Transacciones financieras (ingresos y gastos)</li>
+                    <li>Límites presupuestarios y categorías</li>
+                    <li>Objetivos de proyectos y metas de ahorro</li>
+                    <li>Preferencias de la aplicación (tema, moneda, idioma)</li>
+                    <li>Estado de compra premium (gestionado por Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Responsabilidad de copia de seguridad:</strong> Dado que todos los datos se almacenan localmente, usted es responsable de realizar copias de seguridad de su dispositivo. Recomendamos copias de seguridad regulares a través del sistema de copia de seguridad de su dispositivo.</p>
+                </div>
+                
+                <h3>2. Funciones Premium y compras dentro de la aplicación</h3>
+                <p><strong>Google Play Store:</strong> Todas las compras premium (suscripciones y compras únicas) se procesan a través de Google Play Store. No manejamos información de pago.</p>
+                
+                <p><strong>Datos de compra:</strong> Google Play nos proporciona solo datos de verificación de compra anónimos (estado de compra, ID del producto, fecha de vencimiento). No se comparte ninguna información de pago personal con nosotros.</p>
+                
+                <h3>3. Información de la cuenta</h3>
+                <p><strong>No se requiere cuenta:</strong> BudgetZen no requiere cuentas de usuario. No hay sistema de registro, inicio de sesión o contraseña.</p>
+                
+                <p><strong>Sin recopilación de correo electrónico:</strong> No recopilamos direcciones de correo electrónico, nombres ni ningún identificador personal.</p>
+                
+                <h3>4. Permisos y acceso al dispositivo</h3>
+                <p>BudgetZen puede solicitar los siguientes permisos:</p>
+                <ul>
+                    <li><strong>Acceso al almacenamiento:</strong> Para exportar datos como archivos CSV/Excel</li>
+                    <li><strong>Notificaciones:</strong> Para enviar alertas presupuestarias y recordatorios</li>
+                    <li><strong>Internet (opcional):</strong> Solo para verificación de compra de Google Play</li>
+                </ul>
+                
+                <p>Todos los permisos son opcionales y se explican claramente cuando se solicitan.</p>
+                
+                <h3>5. Servicios de terceros</h3>
+                <p><strong>Servicios de Google Play:</strong> Se utilizan solo para:</p>
+                <ul>
+                    <li>Procesamiento de compras dentro de la aplicación</li>
+                    <li>Restauración de compras al cambiar de dispositivo</li>
+                    <li>Gestión de suscripciones</li>
+                </ul>
+                
+                <p>No utilizamos servicios de análisis, redes publicitarias ni herramientas de seguimiento.</p>
+                
+                <h3>6. Seguridad de datos</h3>
+                <p><strong>Seguridad del dispositivo:</strong> Sus datos están protegidos por la seguridad integrada de su dispositivo (cifrado, pantalla de bloqueo).</p>
+                
+                <p><strong>Sin transmisión externa:</strong> Los datos financieros nunca salen de su dispositivo, ni siquiera en forma cifrada.</p>
+                
+                <h3>7. Privacidad de los niños</h3>
+                <p>BudgetZen no está dirigido a niños menores de 13 años. No recopilamos información de niños conscientemente.</p>
+                
+                <h3>8. Cambios en esta política</h3>
+                <p>Podemos actualizar esta política de privacidad. Los cambios se reflejarán en esta página con una fecha de "Última actualización" actualizada.</p>
+                
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <p>Para preguntas sobre esta política de privacidad, contáctenos en:</p>
+                    <p><strong>Correo electrónico:</strong> support@budgetzen.app</p>
+                    <p><strong>Sitio web:</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">Páginas legales de BudgetZen</a></p>
+                </div>
+                
+                <p>Esta política de privacidad cumple con GDPR, CCPA y otras regulaciones de privacidad.</p>
+            </div>
+        </div>
+        
+        <!-- Italian Version -->
+        <div class="language-content" id="content-it">
+            <div class="content">
+                <h2>Informativa sulla Privacy di BudgetZen</h2>
+                <p><strong>Ultimo aggiornamento:</strong> Gennaio 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Avviso importante:</strong> BudgetZen è un'applicazione 100% locale. Tutti i tuoi dati rimangono sul tuo dispositivo. Non raccogliamo, archiviamo o trasmettiamo informazioni personali.</p>
+                </div>
+                
+                <h3>1. Raccolta e archiviazione dei dati</h3>
+                <p><strong>Nessuna raccolta di dati:</strong> BudgetZen non raccoglie, trasmette o archivia dati personali su server esterni. Tutte le tue informazioni finanziarie rimangono esclusivamente sul tuo dispositivo.</p>
+                
+                <p><strong>Solo archiviazione locale:</strong> I seguenti dati sono archiviati localmente sul tuo dispositivo:</p>
+                <ul>
+                    <li>Transazioni finanziarie (entrate e uscite)</li>
+                    <li>Limiti di budget e categorie</li>
+                    <li>Obiettivi di progetto e obiettivi di risparmio</li>
+                    <li>Preferenze dell'applicazione (tema, valuta, lingua)</li>
+                    <li>Stato dell'acquisto premium (gestito da Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Responsabilità del backup:</strong> Poiché tutti i dati sono archiviati localmente, sei responsabile del backup del tuo dispositivo. Raccomandiamo backup regolari tramite il sistema di backup del tuo dispositivo.</p>
+                </div>
+                
+                <h3>2. Funzionalità Premium e acquisti in-app</h3>
+                <p><strong>Google Play Store:</strong> Tutti gli acquisti premium (abbonamenti e acquisti una tantum) sono elaborati tramite Google Play Store. Non gestiamo informazioni di pagamento.</p>
+                
+                <p><strong>Dati di acquisto:</strong> Google Play ci fornisce solo dati di verifica dell'acquisto anonimi (stato acquisto, ID prodotto, data di scadenza). Nessuna informazione di pagamento personale viene condivisa con noi.</p>
+                
+                <h3>3. Informazioni sull'account</h3>
+                <p><strong>Nessun account richiesto:</strong> BudgetZen non richiede account utente. Non esiste alcun sistema di registrazione, login o password.</p>
+                
+                <p><strong>Nessuna raccolta di email:</strong> Non raccogliamo indirizzi email, nomi o identificatori personali.</p>
+                
+                <h3>4. Permessi e accesso al dispositivo</h3>
+                <p>BudgetZen può richiedere i seguenti permessi:</p>
+                <ul>
+                    <li><strong>Accesso all'archiviazione:</strong> Per esportare dati come file CSV/Excel</li>
+                    <li><strong>Notifiche:</strong> Per inviare avvisi di budget e promemoria</li>
+                    <li><strong>Internet (opzionale):</strong> Solo per la verifica dell'acquisto Google Play</li>
+                </ul>
+                
+                <p>Tutti i permessi sono opzionali e spiegati chiaramente quando richiesti.</p>
+                
+                <h3>5. Servizi di terze parti</h3>
+                <p><strong>Servizi Google Play:</strong> Utilizzati solo per:</p>
+                <ul>
+                    <li>Elaborazione degli acquisti in-app</li>
+                    <li>Ripristino degli acquisti quando si cambia dispositivo</li>
+                    <li>Gestione degli abbonamenti</li>
+                </ul>
+                
+                <p>Non utilizziamo servizi di analisi, reti pubblicitarie o strumenti di tracciamento.</p>
+                
+                <h3>6. Sicurezza dei dati</h3>
+                <p><strong>Sicurezza del dispositivo:</strong> I tuoi dati sono protetti dalla sicurezza integrata del tuo dispositivo (crittografia, schermata di blocco).</p>
+                
+                <p><strong>Nessuna trasmissione esterna:</strong> I dati finanziari non lasciano mai il tuo dispositivo, nemmeno in forma crittografata.</p>
+                
+                <h3>7. Privacy dei bambini</h3>
+                <p>BudgetZen non è rivolto a bambini sotto i 13 anni. Non raccogliamo consapevolmente informazioni dai bambini.</p>
+                
+                <h3>8. Modifiche a questa informativa</h3>
+                <p>Potremmo aggiornare questa informativa sulla privacy. Le modifiche saranno riflesse in questa pagina con una data "Ultimo aggiornamento" aggiornata.</p>
+                
+                <div class="contact-info">
+                    <h3>Informazioni di contatto</h3>
+                    <p>Per domande su questa informativa sulla privacy, contattaci a:</p>
+                    <p><strong>Email:</strong> support@budgetzen.app</p>
+                    <p><strong>Sito web:</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">Pagine legali di BudgetZen</a></p>
+                </div>
+                
+                <p>Questa informativa sulla privacy è conforme a GDPR, CCPA e altre normative sulla privacy.</p>
+            </div>
+        </div>
+        
+        <!-- Portuguese Version -->
+        <div class="language-content" id="content-pt">
+            <div class="content">
+                <h2>Política de Privacidade do BudgetZen</h2>
+                <p><strong>Última atualização:</strong> Janeiro 2024</p>
+                
+                <div class="highlight">
+                    <p>📱 <strong>Aviso importante:</strong> BudgetZen é um aplicativo 100% local. Todos os seus dados permanecem no seu dispositivo. Não coletamos, armazenamos ou transmitimos nenhuma informação pessoal.</p>
+                </div>
+                
+                <h3>1. Coleta e armazenamento de dados</h3>
+                <p><strong>Nenhuma coleta de dados:</strong> O BudgetZen não coleta, transmite ou armazena dados pessoais em servidores externos. Todas as suas informações financeiras permanecem exclusivamente no seu dispositivo.</p>
+                
+                <p><strong>Apenas armazenamento local:</strong> Os seguintes dados são armazenados localmente no seu dispositivo:</p>
+                <ul>
+                    <li>Transações financeiras (receitas e despesas)</li>
+                    <li>Limites orçamentários e categorias</li>
+                    <li>Objetivos de projeto e metas de poupança</li>
+                    <li>Preferências do aplicativo (tema, moeda, idioma)</li>
+                    <li>Status de compra premium (gerenciado pelo Google Play)</li>
+                </ul>
+                
+                <div class="warning">
+                    <p>⚠️ <strong>Responsabilidade do backup:</strong> Como todos os dados são armazenados localmente, você é responsável pelo backup do seu dispositivo. Recomendamos backups regulares através do sistema de backup do seu dispositivo.</p>
+                </div>
+                
+                <h3>2. Recursos Premium e compras no aplicativo</h3>
+                <p><strong>Google Play Store:</strong> Todas as compras premium (assinaturas e compras únicas) são processadas através do Google Play Store. Não lidamos com informações de pagamento.</p>
+                
+                <p><strong>Dados de compra:</strong> O Google Play nos fornece apenas dados de verificação de compra anônimos (status da compra, ID do produto, data de expiração). Nenhuma informação de pagamento pessoal é compartilhada conosco.</p>
+                
+                <h3>3. Informações da conta</h3>
+                <p><strong>Nenhuma conta necessária:</strong> O BudgetZen não requer contas de usuário. Não há sistema de registro, login ou senha.</p>
+                
+                <p><strong>Nenhuma coleta de e-mail:</strong> Não coletamos endereços de e-mail, nomes ou quaisquer identificadores pessoais.</p>
+                
+                <h3>4. Permissões e acesso ao dispositivo</h3>
+                <p>O BudgetZen pode solicitar as seguintes permissões:</p>
+                <ul>
+                    <li><strong>Acesso ao armazenamento:</strong> Para exportar dados como arquivos CSV/Excel</li>
+                    <li><strong>Notificações:</strong> Para enviar alertas orçamentários e lembretes</li>
+                    <li><strong>Internet (opcional):</strong> Apenas para verificação de compra do Google Play</li>
+                </ul>
+                
+                <p>Todas as permissões são opcionais e explicadas claramente quando solicitadas.</p>
+                
+                <h3>5. Serviços de terceiros</h3>
+                <p><strong>Serviços do Google Play:</strong> Usados apenas para:</p>
+                <ul>
+                    <li>Processamento de compras no aplicativo</li>
+                    <li>Restauração de compras ao trocar de dispositivo</li>
+                    <li>Gerenciamento de assinaturas</li>
+                </ul>
+                
+                <p>Não usamos serviços de análise, redes de publicidade ou ferramentas de rastreamento.</p>
+                
+                <h3>6. Segurança de dados</h3>
+                <p><strong>Segurança do dispositivo:</strong> Seus dados são protegidos pela segurança integrada do seu dispositivo (criptografia, tela de bloqueio).</p>
+                
+                <p><strong>Nenhuma transmissão externa:</strong> Dados financeiros nunca saem do seu dispositivo, nem mesmo em forma criptografada.</p>
+                
+                <h3>7. Privacidade das crianças</h3>
+                <p>O BudgetZen não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente informações de crianças.</p>
+                
+                <h3>8. Alterações nesta política</h3>
+                <p>Podemos atualizar esta política de privacidade. As alterações serão refletidas nesta página com uma data de "Última atualização" atualizada.</p>
+                
+                <div class="contact-info">
+                    <h3>Informações de contato</h3>
+                    <p>Para perguntas sobre esta política de privacidade, entre em contato conosco em:</p>
+                    <p><strong>E-mail:</strong> support@budgetzen.app</p>
+                    <p><strong>Website:</strong> <a href="https://budgetzen-app.github.io/budgetzen-legal-pages/" style="color: #0C4A6E;">Páginas legais do BudgetZen</a></p>
+                </div>
+                
+                <p>Esta política de privacidade está em conformidade com GDPR, CCPA e outras regulamentações de privacidade.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 BudgetZen App • Contact: support@budgetzen.app</p>
+            <p>This document is available in 6 languages and applies to all BudgetZen app users worldwide.</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageButtons = document.querySelectorAll('.language-btn');
+            const languageContents = document.querySelectorAll('.language-content');
+            
+            // Set default language based on browser preference or English
+            const browserLang = navigator.language.substring(0, 2);
+            const supportedLangs = ['en', 'fr', 'de', 'es', 'it', 'pt'];
+            const defaultLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+            
+            // Set initial active language
+            setActiveLanguage(defaultLang);
+            
+            // Add click events to language buttons
+            languageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    setActiveLanguage(lang);
+                });
+            });
+            
+            function setActiveLanguage(lang) {
+                // Update buttons
+                languageButtons.forEach(btn => {
+                    if (btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                
+                // Update content visibility
+                languageContents.forEach(content => {
+                    if (content.id === `content-${lang}`) {
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
+                
+                // Update URL without reload
+                history.replaceState(null, '', `#${lang}`);
+            }
+            
+            // Check for language in URL hash
+            const hashLang = window.location.hash.substring(1);
+            if (supportedLangs.includes(hashLang)) {
+                setActiveLanguage(hashLang);
+            }
+        });
+    </script>
+</body>
+                  </html>
