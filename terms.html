@@ -1,120 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Même structure CSS que privacy.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetZen – Terms of Service</title>
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #F8FAFE;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; }
+        .header p { opacity: 0.9; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F1F5F9;
+            padding: 8px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #1E293B;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+        .back-link:hover { background: #E2E8F0; }
+        .language-selector {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .lang-btn {
+            background: white;
+            border: 1px solid #CBD5E1;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .lang-btn.active {
+            background: #6366F1;
+            color: white;
+            border-color: #6366F1;
+        }
+        .content-card {
+            background: white;
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+            border: 1px solid #E9EEF3;
+        }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; animation: fade 0.3s ease; }
+        @keyframes fade { from { opacity:0; } to { opacity:1; } }
+        h2 { color: #6366F1; font-size: 1.8rem; margin: 1.8rem 0 1rem; border-bottom: 2px solid #E9EEF3; padding-bottom: 8px; }
+        h3 { font-size: 1.3rem; margin: 1.5rem 0 0.8rem; color: #0F172A; }
+        h4 { font-size: 1.1rem; margin: 1rem 0 0.5rem; color: #0F172A; }
+        .contact-info { background: #EFF6FF; padding: 24px; border-radius: 20px; margin: 30px 0; }
+        .footer { text-align: center; margin-top: 50px; padding-top: 24px; border-top: 1px solid #E9EEF3; color: #6C7A91; font-size: 0.85rem; }
+        @media (max-width: 700px) { .content-card { padding: 24px; } .header h1 { font-size: 1.8rem; } }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <h1>📄 BudgetZen Terms of Service</h1>
-        <p>Terms and conditions for using BudgetZen app (6 languages available)</p>
+<div class="header">
+    <h1>📄 BudgetZen – Terms of Service</h1>
+    <p>Terms and conditions for using BudgetZen (10 languages)</p>
+</div>
+<div class="container">
+    <a href="index.html" class="back-link">← Back to home</a>
+    <div class="language-selector" id="langSelector"></div>
+    <div class="content-card" id="termsContent"></div>
+    <div class="footer">
+        <p>© 2025 BudgetZen • Contact: sadek.jebly@gmail.com</p>
     </div>
-    
-    <div class="container">
-        <a href="index.html" class="back-btn">← Back to Home</a>
-        
-        <div class="language-selector" id="languageSelector">
-            <!-- Mêmes boutons de langue -->
-        </div>
-        
-        <!-- English Version -->
-        <div class="language-content active" id="content-en">
-            <div class="content">
-                <h2>Terms of Service for BudgetZen</h2>
-                <p><strong>Effective Date:</strong> Janvier 2026</p>
-                
-                <h3>1. Acceptance of Terms</h3>
-                <p>By downloading, installing, or using the BudgetZen mobile application, you agree to be bound by these Terms of Service.</p>
-                
-                <h3>2. Description of Service</h3>
-                <p>BudgetZen is a personal finance management application that operates 100% locally on your device. Features include:</p>
-                <ul>
-                    <li>Tracking income and expenses</li>
-                    <li>Creating and managing budgets</li>
-                    <li>Setting up savings projects</li>
-                    <li>Exporting financial data</li>
-                    <li>Premium features via in-app purchases</li>
-                </ul>
-                
-                <h3>3. No Account Required</h3>
-                <p>BudgetZen does not require user registration, login credentials, or personal information. All data remains on your device.</p>
-                
-                <h3>4. Premium Features & Subscriptions</h3>
-                <h4>4.1 Available Plans</h4>
-                <ul>
-                    <li><strong>Monthly Subscription:</strong> $3.99/month</li>
-                    <li><strong>Annual Subscription:</strong> $39.99/year (save 20%)</li>
-                    <li><strong>Lifetime Access:</strong> $149.99 one-time payment</li>
-                </ul>
-                
-                <h4>4.2 Payment Processing</h4>
-                <p>All payments are processed by Google Play Store. We do not handle or store payment information.</p>
-                
-                <h4>4.3 Subscription Management</h4>
-                <p>Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period. Manage subscriptions in Google Play Store → Subscriptions.</p>
-                
-                <h4>4.4 Refund Policy</h4>
-                <p>Refunds are subject to Google Play Store policies. Contact Google Play Support for refund requests.</p>
-                
-                <h3>5. User Responsibilities</h3>
-                <p>You agree to:</p>
-                <ul>
-                    <li>Use BudgetZen for personal, non-commercial purposes</li>
-                    <li>Keep your device secure to protect your financial data</li>
-                    <li>Perform regular backups of your data</li>
-                    <li>Not attempt to reverse-engineer or modify the application</li>
-                </ul>
-                
-                <h3>6. Data & Privacy</h3>
-                <p>All data is stored locally on your device. We do not:</p>
-                <ul>
-                    <li>Collect personal information</li>
-                    <li>Transmit data to external servers</li>
-                    <li>Use analytics or tracking tools</li>
-                    <li>Share data with third parties</li>
-                </ul>
-                
-                <h3>7. Disclaimer of Warranty</h3>
-                <p>BudgetZen is provided "as is" without warranties of any kind. We do not guarantee:</p>
-                <ul>
-                    <li>Uninterrupted or error-free service</li>
-                    <li>Accuracy of financial calculations or projections</li>
-                    <li>Data recovery in case of device failure</li>
-                </ul>
-                
-                <h3>8. Limitation of Liability</h3>
-                <p>BudgetZen and its developers are not liable for:</p>
-                <ul>
-                    <li>Financial decisions made using the app</li>
-                    <li>Data loss due to device failure or user error</li>
-                    <li>Inaccuracies in imported or exported data</li>
-                    <li>Issues with Google Play Store purchases</li>
-                </ul>
-                
-                <h3>9. Termination</h3>
-                <p>We may terminate or suspend access to the app if you violate these terms. Premium subscriptions will not be refunded upon termination.</p>
-                
-                <h3>10. Changes to Terms</h3>
-                <p>We may update these terms. Continued use of the app constitutes acceptance of updated terms.</p>
-                
-                <h3>11. Governing Law</h3>
-                <p>These terms are governed by the laws of the European Union, with special consideration for consumer protection laws.</p>
-                
-                <h3>12. Contact Information</h3>
-                <div class="contact-info">
-                    <p>For questions about these terms, contact:</p>
-                    <p><strong>Email:</strong> sadek.jebly@gmail.com</p>
-                    <p><strong>Website:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZen Legal Pages</a></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Ajouter les versions français, allemand, espagnol, italien, portugais -->
-        
-        <div class="footer">
-            <p>© 2026 BudgetZen App • Contact: sadek.jebly@gmail.com</p>
-        </div>
-    </div>
-    
-    <!-- Même script JavaScript que privacy.html -->
+</div>
+<script>
+const languages = ['en','fr','de','es','it','pt','ja','ar','ko','tr'];
+const langNames = {
+    en:'🇬🇧 English', fr:'🇫🇷 Français', de:'🇩🇪 Deutsch', es:'🇪🇸 Español', it:'🇮🇹 Italiano',
+    pt:'🇵🇹 Português', ja:'🇯🇵 日本語', ar:'🇸🇦 العربية', ko:'🇰🇷 한국어', tr:'🇹🇷 Türkçe'
+};
+const termsHTML = {
+en: `<h2>Terms of Service for BudgetZen</h2><p><strong>Effective Date:</strong> January 2025</p><h3>1. Acceptance of Terms</h3><p>By downloading, installing, or using the BudgetZen mobile application, you agree to be bound by these Terms of Service.</p><h3>2. Description of Service</h3><p>BudgetZen is a personal finance management application that operates 100% locally on your device. Features include:</p><ul><li>Tracking income and expenses</li><li>Creating and managing budgets</li><li>Setting up savings projects</li><li>Exporting financial data</li><li>Premium features via in-app purchases</li></ul><h3>3. No Account Required</h3><p>BudgetZen does not require user registration, login credentials, or personal information. All data remains on your device.</p><h3>4. Premium Features & Subscriptions</h3><h4>4.1 Available Plans</h4><ul><li><strong>Monthly Subscription:</strong> $3.99/month</li><li><strong>Annual Subscription:</strong> $39.99/year (save 20%)</li><li><strong>Lifetime Access:</strong> $149.99 one-time payment</li></ul><h4>4.2 Payment Processing</h4><p>All payments are processed by Google Play Store. We do not handle or store payment information.</p><h4>4.3 Subscription Management</h4><p>Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period. Manage subscriptions in Google Play Store → Subscriptions.</p><h4>4.4 Refund Policy</h4><p>Refunds are subject to Google Play Store policies. Contact Google Play Support for refund requests.</p><h3>5. User Responsibilities</h3><p>You agree to:</p><ul><li>Use BudgetZen for personal, non-commercial purposes</li><li>Keep your device secure to protect your financial data</li><li>Perform regular backups of your data</li><li>Not attempt to reverse-engineer or modify the application</li></ul><h3>6. Data & Privacy</h3><p>All data is stored locally on your device. We do not:</p><ul><li>Collect personal information</li><li>Transmit data to external servers</li><li>Use analytics or tracking tools</li><li>Share data with third parties</li></ul><h3>7. Disclaimer of Warranty</h3><p>BudgetZen is provided "as is" without warranties of any kind. We do not guarantee:</p><ul><li>Uninterrupted or error-free service</li><li>Accuracy of financial calculations or projections</li><li>Data recovery in case of device failure</li></ul><h3>8. Limitation of Liability</h3><p>BudgetZen and its developers are not liable for:</p><ul><li>Financial decisions made using the app</li><li>Data loss due to device failure or user error</li><li>Inaccuracies in imported or exported data</li><li>Issues with Google Play Store purchases</li></ul><h3>9. Termination</h3><p>We may terminate or suspend access to the app if you violate these terms. Premium subscriptions will not be refunded upon termination.</p><h3>10. Changes to Terms</h3><p>We may update these terms. Continued use of the app constitutes acceptance of updated terms.</p><h3>11. Governing Law</h3><p>These terms are governed by the laws of the European Union, with special consideration for consumer protection laws.</p><div class="contact-info"><h3>Contact Information</h3><p>For questions about these terms, contact us at:</p><p><strong>Email:</strong> sadek.jebly@gmail.com</p><p><strong>Website:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZen Legal Pages</a></p></div>`,
+fr: `<h2>Conditions d'utilisation de BudgetZen</h2><p><strong>Date d'entrée en vigueur :</strong> Janvier 2025</p><h3>1. Acceptation des conditions</h3><p>En téléchargeant, installant ou utilisant l'application mobile BudgetZen, vous acceptez d'être lié par ces conditions d'utilisation.</p><h3>2. Description du service</h3><p>BudgetZen est une application de gestion de finances personnelles fonctionnant 100% localement sur votre appareil. Les fonctionnalités incluent :</p><ul><li>Suivi des revenus et dépenses</li><li>Création et gestion de budgets</li><li>Mise en place de projets d'épargne</li><li>Exportation de données financières</li><li>Fonctionnalités Premium via achats intégrés</li></ul><h3>3. Aucun compte requis</h3><p>BudgetZen ne nécessite pas d'inscription, d'identifiants de connexion ou d'informations personnelles. Toutes les données restent sur votre appareil.</p><h3>4. Fonctionnalités Premium et abonnements</h3><h4>4.1 Formules disponibles</h4><ul><li><strong>Abonnement mensuel :</strong> 3,99 €/mois</li><li><strong>Abonnement annuel :</strong> 39,99 €/an (économie de 20 %)</li><li><strong>Accès à vie :</strong> 149,99 € paiement unique</li></ul><h4>4.2 Traitement des paiements</h4><p>Tous les paiements sont traités par Google Play Store. Nous ne traitons ni ne stockons les informations de paiement.</p><h4>4.3 Gestion des abonnements</h4><p>Les abonnements se renouvellent automatiquement sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez vos abonnements dans Google Play Store → Abonnements.</p><h4>4.4 Politique de remboursement</h4><p>Les remboursements sont soumis aux politiques de Google Play Store. Contactez le support Google Play pour toute demande de remboursement.</p><h3>5. Responsabilités de l'utilisateur</h3><p>Vous acceptez de :</p><ul><li>Utiliser BudgetZen à des fins personnelles et non commerciales</li><li>Maintenir votre appareil sécurisé pour protéger vos données financières</li><li>Effectuer des sauvegardes régulières de vos données</li><li>Ne pas tenter de rétro-ingénierie ou de modifier l'application</li></ul><h3>6. Données et confidentialité</h3><p>Toutes les données sont stockées localement sur votre appareil. Nous ne :</p><ul><li>Collectons pas d'informations personnelles</li><li>Transmettons pas de données à des serveurs externes</li><li>Utilisons pas d'outils d'analyse ou de suivi</li><li>Partageons pas de données avec des tiers</li></ul><h3>7. Clause de non-garantie</h3><p>BudgetZen est fourni "en l'état" sans aucune garantie. Nous ne garantissons pas :</p><ul><li>Un service ininterrompu ou sans erreur</li><li>L'exactitude des calculs ou projections financiers</li><li>La récupération des données en cas de panne de l'appareil</li></ul><h3>8. Limitation de responsabilité</h3><p>BudgetZen et ses développeurs ne sont pas responsables de :</p><ul><li>Décisions financières prises via l'application</li><li>Perte de données due à une panne de l'appareil ou une erreur de l'utilisateur</li><li>Inexactitudes dans les données importées ou exportées</li><li>Problèmes liés aux achats Google Play Store</li></ul><h3>9. Résiliation</h3><p>Nous pouvons résilier ou suspendre l'accès à l'application en cas de violation de ces conditions. Les abonnements Premium ne seront pas remboursés en cas de résiliation.</p><h3>10. Modifications des conditions</h3><p>Nous pouvons mettre à jour ces conditions. L'utilisation continue de l'application constitue une acceptation des conditions mises à jour.</p><h3>11. Droit applicable</h3><p>Ces conditions sont régies par les lois de l'Union européenne, avec une attention particulière aux lois sur la protection des consommateurs.</p><div class="contact-info"><h3>Informations de contact</h3><p>Pour toute question concernant ces conditions, contactez-nous à :</p><p><strong>Email :</strong> sadek.jebly@gmail.com</p><p><strong>Site web :</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">Pages légales de BudgetZen</a></p></div>`,
+de: `<h2>Nutzungsbedingungen für BudgetZen</h2><p><strong>Gültig ab:</strong> Januar 2025</p><h3>1. Annahme der Bedingungen</h3><p>Durch das Herunterladen, Installieren oder Verwenden der BudgetZen-Mobilanwendung erklären Sie sich mit diesen Nutzungsbedingungen einverstanden.</p><h3>2. Beschreibung des Dienstes</h3><p>BudgetZen ist eine Anwendung zur persönlichen Finanzverwaltung, die zu 100% lokal auf Ihrem Gerät läuft. Zu den Funktionen gehören:</p><ul><li>Erfassung von Einnahmen und Ausgaben</li><li>Erstellung und Verwaltung von Budgets</li><li>Einrichtung von Sparprojekten</li><li>Export von Finanzdaten</li><li>Premium-Funktionen über In-App-Käufe</li></ul><h3>3. Kein Konto erforderlich</h3><p>BudgetZen erfordert keine Benutzerregistrierung, Anmeldedaten oder persönliche Informationen. Alle Daten bleiben auf Ihrem Gerät.</p><h3>4. Premium-Funktionen und Abonnements</h3><h4>4.1 Verfügbare Pläne</h4><ul><li><strong>Monatsabonnement:</strong> 3,99 €/Monat</li><li><strong>Jahresabonnement:</strong> 39,99 €/Jahr (20% sparen)</li><li><strong>Lebenslanger Zugang:</strong> 149,99 € einmalige Zahlung</li></ul><h4>4.2 Zahlungsabwicklung</h4><p>Alle Zahlungen werden über den Google Play Store abgewickelt. Wir verarbeiten oder speichern keine Zahlungsinformationen.</p><h4>4.3 Abonnementverwaltung</h4><p>Abonnements verlängern sich automatisch, es sei denn, sie werden mindestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt. Verwalten Sie Abonnements im Google Play Store → Abonnements.</p><h4>4.4 Rückerstattungsrichtlinie</h4><p>Rückerstattungen unterliegen den Richtlinien des Google Play Store. Wenden Sie sich für Rückerstattungsanfragen an den Google Play-Support.</p><h3>5. Verantwortlichkeiten des Benutzers</h3><p>Sie erklären sich damit einverstanden:</p><ul><li>BudgetZen für persönliche, nichtkommerzielle Zwecke zu nutzen</li><li>Ihr Gerät sicher zu halten, um Ihre Finanzdaten zu schützen</li><li>Regelmäßige Backups Ihrer Daten durchzuführen</li><li>Nicht zu versuchen, die Anwendung zurückzuentwickeln oder zu modifizieren</li></ul><h3>6. Daten und Datenschutz</h3><p>Alle Daten werden lokal auf Ihrem Gerät gespeichert. Wir:</p><ul><li>Sammeln keine persönlichen Informationen</li><li>Übertragen keine Daten an externe Server</li><li>Verwenden keine Analyse- oder Tracking-Tools</li><li>Geben keine Daten an Dritte weiter</li></ul><h3>7. Haftungsausschluss</h3><p>BudgetZen wird "wie besehen" ohne jegliche Gewährleistung bereitgestellt. Wir garantieren nicht:</p><ul><li>Ununterbrochenen oder fehlerfreien Dienst</li><li>Genauigkeit von Finanzberechnungen oder -prognosen</li><li>Datenwiederherstellung bei Geräteausfall</li></ul><h3>8. Haftungsbeschränkung</h3><p>BudgetZen und seine Entwickler haften nicht für:</p><ul><li>Finanzielle Entscheidungen, die mit der App getroffen werden</li><li>Datenverlust aufgrund von Geräteausfall oder Benutzerfehler</li><li>Ungenauigkeiten in importierten oder exportierten Daten</li><li>Probleme mit Google Play Store-Käufen</li></ul><h3>9. Kündigung</h3><p>Wir können den Zugang zur App kündigen oder aussetzen, wenn Sie gegen diese Bedingungen verstoßen. Premium-Abonnements werden im Falle einer Kündigung nicht erstattet.</p><h3>10. Änderungen der Bedingungen</h3><p>Wir können diese Bedingungen aktualisieren. Die fortgesetzte Nutzung der App stellt die Zustimmung zu den aktualisierten Bedingungen dar.</p><h3>11. Geltendes Recht</h3><p>Diese Bedingungen unterliegen den Gesetzen der Europäischen Union, unter besonderer Berücksichtigung der Verbraucherschutzgesetze.</p><div class="contact-info"><h3>Kontaktinformationen</h3><p>Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter:</p><p><strong>E-Mail:</strong> sadek.jebly@gmail.com</p><p><strong>Website:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZen Rechtliche Seiten</a></p></div>`,
+es: `<h2>Términos de servicio de BudgetZen</h2><p><strong>Fecha de entrada en vigor:</strong> Enero 2025</p><h3>1. Aceptación de los términos</h3><p>Al descargar, instalar o usar la aplicación móvil BudgetZen, usted acepta quedar vinculado por estos Términos de servicio.</p><h3>2. Descripción del servicio</h3><p>BudgetZen es una aplicación de gestión de finanzas personales que funciona 100% localmente en su dispositivo. Las características incluyen:</p><ul><li>Seguimiento de ingresos y gastos</li><li>Creación y gestión de presupuestos</li><li>Configuración de proyectos de ahorro</li><li>Exportación de datos financieros</li><li>Funciones Premium mediante compras dentro de la aplicación</li></ul><h3>3. No se requiere cuenta</h3><p>BudgetZen no requiere registro de usuario, credenciales de inicio de sesión ni información personal. Todos los datos permanecen en su dispositivo.</p><h3>4. Funciones Premium y suscripciones</h3><h4>4.1 Planes disponibles</h4><ul><li><strong>Suscripción mensual:</strong> 3,99 €/mes</li><li><strong>Suscripción anual:</strong> 39,99 €/año (ahorre un 20%)</li><li><strong>Acceso de por vida:</strong> 149,99 € pago único</li></ul><h4>4.2 Procesamiento de pagos</h4><p>Todos los pagos son procesados por Google Play Store. No manejamos ni almacenamos información de pago.</p><h4>4.3 Gestión de suscripciones</h4><p>Las suscripciones se renuevan automáticamente a menos que se cancelen al menos 24 horas antes del final del período actual. Administre sus suscripciones en Google Play Store → Suscripciones.</p><h4>4.4 Política de reembolso</h4><p>Los reembolsos están sujetos a las políticas de Google Play Store. Comuníquese con el soporte de Google Play para solicitudes de reembolso.</p><h3>5. Responsabilidades del usuario</h3><p>Usted acepta:</p><ul><li>Usar BudgetZen para fines personales no comerciales</li><li>Mantener su dispositivo seguro para proteger sus datos financieros</li><li>Realizar copias de seguridad periódicas de sus datos</li><li>No intentar realizar ingeniería inversa ni modificar la aplicación</li></ul><h3>6. Datos y privacidad</h3><p>Todos los datos se almacenan localmente en su dispositivo. Nosotros no:</p><ul><li>Recopilamos información personal</li><li>Transmitimos datos a servidores externos</li><li>Utilizamos herramientas de análisis o seguimiento</li><li>Compartimos datos con terceros</li></ul><h3>7. Renuncia de garantía</h3><p>BudgetZen se proporciona "tal cual" sin garantías de ningún tipo. No garantizamos:</p><ul><li>Servicio ininterrumpido o libre de errores</li><li>Exactitud de los cálculos o proyecciones financieras</li><li>Recuperación de datos en caso de falla del dispositivo</li></ul><h3>8. Limitación de responsabilidad</h3><p>BudgetZen y sus desarrolladores no son responsables de:</p><ul><li>Decisiones financieras tomadas mediante la aplicación</li><li>Pérdida de datos debido a falla del dispositivo o error del usuario</li><li>Inexactitudes en los datos importados o exportados</li><li>Problemas con las compras de Google Play Store</li></ul><h3>9. Terminación</h3><p>Podemos terminar o suspender el acceso a la aplicación si viola estos términos. Las suscripciones Premium no serán reembolsadas en caso de terminación.</p><h3>10. Cambios en los términos</h3><p>Podemos actualizar estos términos. El uso continuado de la aplicación constituye la aceptación de los términos actualizados.</p><h3>11. Ley aplicable</h3><p>Estos términos se rigen por las leyes de la Unión Europea, con especial consideración a las leyes de protección al consumidor.</p><div class="contact-info"><h3>Información de contacto</h3><p>Para preguntas sobre estos términos, contáctenos en:</p><p><strong>Correo electrónico:</strong> sadek.jebly@gmail.com</p><p><strong>Sitio web:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">Páginas legales de BudgetZen</a></p></div>`,
+it: `<h2>Termini di servizio di BudgetZen</h2><p><strong>Data di entrata in vigore:</strong> Gennaio 2025</p><h3>1. Accettazione dei termini</h3><p>Scaricando, installando o utilizzando l'applicazione mobile BudgetZen, accetti di essere vincolato dai presenti Termini di servizio.</p><h3>2. Descrizione del servizio</h3><p>BudgetZen è un'applicazione di gestione delle finanze personali che funziona al 100% localmente sul tuo dispositivo. Le funzionalità includono:</p><ul><li>Tracciamento di entrate e uscite</li><li>Creazione e gestione di budget</li><li>Impostazione di progetti di risparmio</li><li>Esportazione di dati finanziari</li><li>Funzionalità Premium tramite acquisti in-app</li></ul><h3>3. Nessun account richiesto</h3><p>BudgetZen non richiede registrazione utente, credenziali di accesso o informazioni personali. Tutti i dati rimangono sul tuo dispositivo.</p><h3>4. Funzionalità Premium e abbonamenti</h3><h4>4.1 Piani disponibili</h4><ul><li><strong>Abbonamento mensile:</strong> 3,99 €/mese</li><li><strong>Abbonamento annuale:</strong> 39,99 €/anno (risparmia il 20%)</li><li><strong>Accesso a vita:</strong> 149,99 € pagamento unico</li></ul><h4>4.2 Elaborazione dei pagamenti</h4><p>Tutti i pagamenti sono elaborati da Google Play Store. Non gestiamo né conserviamo informazioni di pagamento.</p><h4>4.3 Gestione degli abbonamenti</h4><p>Gli abbonamenti si rinnovano automaticamente a meno che non vengano cancellati almeno 24 ore prima della fine del periodo corrente. Gestisci gli abbonamenti in Google Play Store → Abbonamenti.</p><h4>4.4 Politica di rimborso</h4><p>I rimborsi sono soggetti alle politiche di Google Play Store. Contatta il supporto di Google Play per richieste di rimborso.</p><h3>5. Responsabilità dell'utente</h3><p>Accetti di:</p><ul><li>Utilizzare BudgetZen per scopi personali e non commerciali</li><li>Mantenere il dispositivo sicuro per proteggere i tuoi dati finanziari</li><li>Eseguire backup regolari dei tuoi dati</li><li>Non tentare di decodificare o modificare l'applicazione</li></ul><h3>6. Dati e privacy</h3><p>Tutti i dati sono archiviati localmente sul tuo dispositivo. Noi non:</p><ul><li>Raccogliamo informazioni personali</li><li>Trasmettiamo dati a server esterni</li><li>Utilizziamo strumenti di analisi o tracciamento</li><li>Condividiamo dati con terze parti</li></ul><h3>7. Esclusione di garanzia</h3><p>BudgetZen è fornito "cos com'è" senza garanzie di alcun tipo. Non garantiamo:</p><ul><li>Servizio ininterrotto o privo di errori</li><li>Accuratezza dei calcoli o proiezioni finanziarie</li><li>Recupero dei dati in caso di guasto del dispositivo</li></ul><h3>8. Limitazione di responsabilità</h3><p>BudgetZen e i suoi sviluppatori non sono responsabili per:</p><ul><li>Decisioni finanziarie prese utilizzando l'app</li><li>Perdita di dati dovuta a guasto del dispositivo o errore dell'utente</li><li>Imprecisioni nei dati importati o esportati</li><li>Problemi con gli acquisti di Google Play Store</li></ul><h3>9. Risoluzione</h3><p>Possiamo risolvere o sospendere l'accesso all'app in caso di violazione di questi termini. Gli abbonamenti Premium non verranno rimborsati in caso di risoluzione.</p><h3>10. Modifiche ai termini</h3><p>Possiamo aggiornare questi termini. L'uso continuato dell'app costituisce accettazione dei termini aggiornati.</p><h3>11. Legge applicabile</h3><p>Questi termini sono regolati dalle leggi dell'Unione Europea, con particolare considerazione per le leggi sulla protezione dei consumatori.</p><div class="contact-info"><h3>Informazioni di contatto</h3><p>Per domande su questi termini, contattaci a:</p><p><strong>Email:</strong> sadek.jebly@gmail.com</p><p><strong>Sito web:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">Pagine legali di BudgetZen</a></p></div>`,
+pt: `<h2>Termos de serviço do BudgetZen</h2><p><strong>Data de entrada em vigor:</strong> Janeiro 2025</p><h3>1. Aceitação dos termos</h3><p>Ao baixar, instalar ou usar o aplicativo móvel BudgetZen, você concorda em ficar vinculado a estes Termos de serviço.</p><h3>2. Descrição do serviço</h3><p>BudgetZen é um aplicativo de gestão de finanças pessoais que opera 100% localmente no seu dispositivo. Os recursos incluem:</p><ul><li>Registro de receitas e despesas</li><li>Criação e gestão de orçamentos</li><li>Configuração de projetos de poupança</li><li>Exportação de dados financeiros</li><li>Recursos Premium através de compras no aplicativo</li></ul><h3>3. Nenhuma conta necessária</h3><p>BudgetZen não exige registro de usuário, credenciais de login ou informações pessoais. Todos os dados permanecem no seu dispositivo.</p><h3>4. Recursos Premium e assinaturas</h3><h4>4.1 Planos disponíveis</h4><ul><li><strong>Assinatura mensal:</strong> 3,99 €/mês</li><li><strong>Assinatura anual:</strong> 39,99 €/ano (economize 20%)</li><li><strong>Acesso vitalício:</strong> 149,99 € pagamento único</li></ul><h4>4.2 Processamento de pagamentos</h4><p>Todos os pagamentos são processados pela Google Play Store. Não lidamos nem armazenamos informações de pagamento.</p><h4>4.3 Gestão de assinaturas</h4><p>As assinaturas são renovadas automaticamente, a menos que sejam canceladas pelo menos 24 horas antes do final do período atual. Gerencie assinaturas na Google Play Store → Assinaturas.</p><h4>4.4 Política de reembolso</h4><p>Os reembolsos estão sujeitos às políticas da Google Play Store. Entre em contato com o suporte do Google Play para solicitações de reembolso.</p><h3>5. Responsabilidades do usuário</h3><p>Você concorda em:</p><ul><li>Usar o BudgetZen para fins pessoais e não comerciais</li><li>Manter seu dispositivo seguro para proteger seus dados financeiros</li><li>Realizar backups regulares dos seus dados</li><li>Não tentar fazer engenharia reversa ou modificar o aplicativo</li></ul><h3>6. Dados e privacidade</h3><p>Todos os dados são armazenados localmente no seu dispositivo. Nós não:</p><ul><li>Coletamos informações pessoais</li><li>Transmitimos dados para servidores externos</li><li>Utilizamos ferramentas de análise ou rastreamento</li><li>Compartilhamos dados com terceiros</li></ul><h3>7. Isenção de garantia</h3><p>O BudgetZen é fornecido "como está" sem garantias de qualquer tipo. Não garantimos:</p><ul><li>Serviço ininterrupto ou livre de erros</li><li>Precisão de cálculos ou projeções financeiras</li><li>Recuperação de dados em caso de falha do dispositivo</li></ul><h3>8. Limitação de responsabilidade</h3><p>O BudgetZen e seus desenvolvedores não são responsáveis por:</p><ul><li>Decisões financeiras tomadas usando o aplicativo</li><li>Perda de dados devido a falha do dispositivo ou erro do usuário</li><li>Imprecisões em dados importados ou exportados</li><li>Problemas com compras na Google Play Store</li></ul><h3>9. Rescisão</h3><p>Podemos rescindir ou suspender o acesso ao aplicativo se você violar estes termos. As assinaturas Premium não serão reembolsadas em caso de rescisão.</p><h3>10. Alterações nos termos</h3><p>Podemos atualizar estes termos. O uso continuado do aplicativo constitui aceitação dos termos atualizados.</p><h3>11. Lei aplicável</h3><p>Estes termos são regidos pelas leis da União Europeia, com especial consideração pelas leis de proteção ao consumidor.</p><div class="contact-info"><h3>Informações de contato</h3><p>Para perguntas sobre estes termos, entre em contato conosco em:</p><p><strong>E-mail:</strong> sadek.jebly@gmail.com</p><p><strong>Website:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">Páginas legais do BudgetZen</a></p></div>`,
+ja: `<h2>BudgetZen利用規約</h2><p><strong>発効日:</strong> 2025年1月</p><h3>1. 利用規約への同意</h3><p>BudgetZenモバイルアプリケーションをダウンロード、インストール、または使用することにより、本利用規約に拘束されることに同意したものとみなされます。</p><h3>2. サービスの説明</h3><p>BudgetZenは、お使いのデバイス上で100％ローカルに動作する個人向け家計管理アプリケーションです。機能は以下の通りです：</p><ul><li>収入と支出の追跡</li><li>予算の作成と管理</li><li>貯蓄プロジェクトの設定</li><li>財務データのエクスポート</li><li>アプリ内購入によるプレミアム機能</li></ul><h3>3. アカウントは不要</h3><p>BudgetZenは、ユーザー登録、ログイン認証情報、個人情報を必要としません。すべてのデータはお使いのデバイスに残ります。</p><h3>4. プレミアム機能とサブスクリプション</h3><h4>4.1 利用可能なプラン</h4><ul><li><strong>月額サブスクリプション:</strong> 3.99 €/月</li><li><strong>年額サブスクリプション:</strong> 39.99 €/年 (20%お得)</li><li><strong>生涯アクセス:</strong> 149.99 € 一括払い</li></ul><h4>4.2 支払い処理</h4><p>すべての支払いはGoogle Playストアによって処理されます。当社は支払い情報を処理または保存しません。</p><h4>4.3 サブスクリプション管理</h4><p>サブスクリプションは、現在の期間終了の少なくとも24時間前にキャンセルされない限り自動更新されます。サブスクリプションの管理はGoogle Playストア → サブスクリプションで行ってください。</p><h4>4.4 返金ポリシー</h4><p>返金はGoogle Playストアのポリシーに従います。返金のリクエストはGoogle Playサポートにお問い合わせください。</p><h3>5. ユーザーの責任</h3><p>あなたは以下に同意するものとします：</p><ul><li>BudgetZenを個人の非商用目的で使用すること</li><li>財務データを保護するためにデバイスを安全に保つこと</li><li>データの定期的なバックアップを実行すること</li><li>アプリケーションのリバースエンジニアリングや改変を試みないこと</li></ul><h3>6. データとプライバシー</h3><p>すべてのデータはお使いのデバイスにローカル保存されます。当社は以下を行いません：</p><ul><li>個人情報を収集する</li><li>データを外部サーバーに送信する</li><li>分析や追跡ツールを使用する</li><li>データを第三者と共有する</li></ul><h3>7. 保証の免責</h3><p>BudgetZenは「現状有姿」で提供され、いかなる種類の保証もありません。当社は以下を保証しません：</p><ul><li>中断やエラーのないサービス</li><li>財務計算や予測の正確性</li><li>デバイス障害時のデータ復旧</li></ul><h3>8. 責任の制限</h3><p>BudgetZenおよびその開発者は、以下について責任を負いません：</p><ul><li>アプリを使用して行われた財務上の決定</li><li>デバイスの故障やユーザーエラーによるデータ損失</li><li>インポートまたはエクスポートされたデータの不正確さ</li><li>Google Playストアの購入に関する問題</li></ul><h3>9. 終了</h3><p>本規約に違反した場合、当社はアプリへのアクセスを終了または停止することができます。終了の場合、プレミアムサブスクリプションの返金は行われません。</p><h3>10. 規約の変更</h3><p>当社は本規約を更新することがあります。アプリの継続使用は、更新された規約の承諾を構成します。</p><h3>11. 準拠法</h3><p>本規約は欧州連合の法律に準拠し、消費者保護法に特に配慮します。</p><div class="contact-info"><h3>連絡先</h3><p>本規約に関する質問は、以下までお問い合わせください：</p><p><strong>Eメール:</strong> sadek.jebly@gmail.com</p><p><strong>ウェブサイト:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZenリーガルページ</a></p></div>`,
+ar: `<h2>شروط خدمة BudgetZen</h2><p><strong>تاريخ السريان:</strong> يناير 2025</p><h3>1. قبول الشروط</h3><p>بتنزيل أو تثبيت أو استخدام تطبيق BudgetZen للهواتف المحمولة، فإنك توافق على الالتزام بشروط الخدمة هذه.</p><h3>2. وصف الخدمة</h3><p>BudgetZen هو تطبيق لإدارة التمويل الشخصي يعمل بنسبة 100٪ محليًا على جهازك. تشمل الميزات:</p><ul><li>تتبع الدخل والمصروفات</li><li>إنشاء وإدارة الميزانيات</li><li>إعداد مشاريع الادخار</li><li>تصدير البيانات المالية</li><li>ميزات مميزة عبر المشتريات داخل التطبيق</li></ul><h3>3. لا حاجة لحساب</h3><p>لا يتطلب BudgetZen تسجيل مستخدم أو بيانات اعتماد تسجيل دخول أو معلومات شخصية. جميع البيانات تبقى على جهازك.</p><h3>4. الميزات المميزة والاشتراكات</h3><h4>4.1 الخطط المتاحة</h4><ul><li><strong>اشتراك شهري:</strong> 3.99 €/شهر</li><li><strong>اشتراك سنوي:</strong> 39.99 €/سنة (وفر 20%)</li><li><strong>وصول مدى الحياة:</strong> 149.99 € دفعة واحدة</li></ul><h4>4.2 معالجة الدفع</h4><p>تتم معالجة جميع المدفوعات بواسطة متجر Google Play. نحن لا نتعامل مع معلومات الدفع ولا نخزنها.</p><h4>4.3 إدارة الاشتراكات</h4><p>يتم تجديد الاشتراكات تلقائيًا ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية. قم بإدارة الاشتراكات في متجر Google Play → الاشتراكات.</p><h4>4.4 سياسة استرداد الأموال</h4><p>تخضع عمليات الاسترداد لسياسات متجر Google Play. اتصل بدعم Google Play لطلبات الاسترداد.</p><h3>5. مسؤوليات المستخدم</h3><p>أنت توافق على:</p><ul><li>استخدام BudgetZen للأغراض الشخصية غير التجارية</li><li>الحفاظ على أمان جهازك لحماية بياناتك المالية</li><li>إجراء نسخ احتياطية منتظمة لبياناتك</li><li>عدم محاولة هندسة عكسية أو تعديل التطبيق</li></ul><h3>6. البيانات والخصوصية</h3><p>يتم تخزين جميع البيانات محليًا على جهازك. نحن لا:</p><ul><li>نجمع معلومات شخصية</li><li>ننقل البيانات إلى خوادم خارجية</li><li>نستخدم أدوات التحليل أو التتبع</li><li>نشارك البيانات مع أطراف ثالثة</li></ul><h3>7. إخلاء المسؤولية عن الضمان</h3><p>يتم توفير BudgetZen "كما هو" دون أي ضمانات من أي نوع. نحن لا نضمن:</p><ul><li>خدمة غير منقطعة أو خالية من الأخطاء</li><li>دقة الحسابات أو التوقعات المالية</li><li>استعادة البيانات في حالة تعطل الجهاز</li></ul><h3>8. تحديد المسؤولية</h3><p>BudgetZen ومطوروه غير مسؤولين عن:</p><ul><li>القرارات المالية المتخذة باستخدام التطبيق</li><li>فقدان البيانات بسبب تعطل الجهاز أو خطأ المستخدم</li><li>عدم الدقة في البيانات المستوردة أو المصدرة</li><li>المشكلات المتعلقة بمشتريات متجر Google Play</li></ul><h3>9. الإنهاء</h3><p>يجوز لنا إنهاء أو تعليق الوصول إلى التطبيق إذا انتهكت هذه الشروط. لن يتم استرداد الاشتراكات المميزة عند الإنهاء.</p><h3>10. التغييرات على الشروط</h3><p>قد نقوم بتحديث هذه الشروط. الاستمرار في استخدام التطبيق يشكل قبولاً للشروط المحدثة.</p><h3>11. القانون الحاكم</h3><p>تخضع هذه الشروط لقوانين الاتحاد الأوروبي، مع اعتبار خاص لقوانين حماية المستهلك.</p><div class="contact-info"><h3>معلومات الاتصال</h3><p>للاستفسار حول هذه الشروط، اتصل بنا على:</p><p><strong>البريد الإلكتروني:</strong> sadek.jebly@gmail.com</p><p><strong>الموقع الإلكتروني:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">الصفحات القانونية لـ BudgetZen</a></p></div>`,
+ko: `<h2>BudgetZen 이용약관</h2><p><strong>발효일:</strong> 2025년 1월</p><h3>1. 이용약관 동의</h3><p>BudgetZen 모바일 애플리케이션을 다운로드, 설치 또는 사용함으로써 귀하는 본 이용약관에 구속되는 데 동의하는 것으로 간주됩니다.</p><h3>2. 서비스 설명</h3><p>BudgetZen은 사용자 기기에서 100% 로컬로 작동하는 개인 재무 관리 애플리케이션입니다. 기능은 다음과 같습니다:</p><ul><li>수입 및 지출 추적</li><li>예산 생성 및 관리</li><li>저축 프로젝트 설정</li><li>재무 데이터 내보내기</li><li>인앱 구매를 통한 프리미엄 기능</li></ul><h3>3. 계정 불필요</h3><p>BudgetZen은 사용자 등록, 로그인 자격 증명 또는 개인 정보를 필요로 하지 않습니다. 모든 데이터는 사용자 기기에 남습니다.</p><h3>4. 프리미엄 기능 및 구독</h3><h4>4.1 이용 가능한 요금제</h4><ul><li><strong>월간 구독:</strong> 3.99 €/월</li><li><strong>연간 구독:</strong> 39.99 €/년 (20% 절약)</li><li><strong>평생 액세스:</strong> 149.99 € 일회성 결제</li></ul><h4>4.2 결제 처리</h4><p>모든 결제는 Google Play 스토어에서 처리됩니다. 당사는 결제 정보를 처리하거나 저장하지 않습니다.</p><h4>4.3 구독 관리</h4><p>구독은 현재 기간이 종료되기 최소 24시간 전에 취소하지 않으면 자동 갱신됩니다. Google Play 스토어 → 구독에서 구독을 관리하세요.</p><h4>4.4 환불 정책</h4><p>환불은 Google Play 스토어 정책에 따릅니다. 환불 요청은 Google Play 지원팀에 문의하세요.</p><h3>5. 사용자 책임</h3><p>귀하는 다음에 동의합니다:</p><ul><li>BudgetZen을 개인적, 비상업적 목적으로 사용</li><li>재무 데이터를 보호하기 위해 기기를 안전하게 유지</li><li>데이터를 정기적으로 백업</li><li>애플리케이션을 리버스 엔지니어링하거나 수정하려고 시도하지 않음</li></ul><h3>6. 데이터 및 개인정보</h3><p>모든 데이터는 사용자 기기에 로컬로 저장됩니다. 당사는 다음을 수행하지 않습니다:</p><ul><li>개인 정보 수집</li><li>데이터를 외부 서버로 전송</li><li>분석 또는 추적 도구 사용</li><li>데이터를 제3자와 공유</li></ul><h3>7. 보증 면책</h3><p>BudgetZen은 "있는 그대로" 제공되며 어떠한 종류의 보증도 없습니다. 당사는 다음을 보장하지 않습니다:</p><ul><li>중단 없음 또는 오류 없는 서비스</li><li>재무 계산 또는 예측의 정확성</li><li>기기 고장 시 데이터 복구</li></ul><h3>8. 책임의 제한</h3><p>BudgetZen 및 개발자는 다음에 대해 책임을 지지 않습니다:</p><ul><li>앱을 사용하여 내린 재무 결정</li><li>기기 고장 또는 사용자 오류로 인한 데이터 손실</li><li>가져오거나 내보낸 데이터의 부정확성</li><li>Google Play 스토어 구매 관련 문제</li></ul><h3>9. 종료</h3><p>본 약관을 위반하는 경우 앱에 대한 액세스를 종료하거나 일시 중단할 수 있습니다. 종료 시 프리미엄 구독은 환불되지 않습니다.</p><h3>10. 약관 변경</h3><p>본 약관은 업데이트될 수 있습니다. 앱을 계속 사용하는 것은 업데이트된 약관에 동의하는 것으로 간주됩니다.</p><h3>11. 준거법</h3><p>본 약관은 유럽 연합의 법률에 따르며, 소비자 보호법에 특히 유의합니다.</p><div class="contact-info"><h3>연락처</h3><p>본 약관에 관한 문의는 다음으로 연락해 주십시오:</p><p><strong>이메일:</strong> sadek.jebly@gmail.com</p><p><strong>웹사이트:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZen 법률 페이지</a></p></div>`,
+tr: `<h2>BudgetZen Hizmet Şartları</h2><p><strong>Yürürlük Tarihi:</strong> Ocak 2025</p><h3>1. Şartların Kabulü</h3><p>BudgetZen mobil uygulamasını indirerek, yükleyerek veya kullanarak, bu Hizmet Şartları ile bağlı olmayı kabul etmiş sayılırsınız.</p><h3>2. Hizmetin Tanımı</h3><p>BudgetZen, cihazınızda %100 yerel olarak çalışan kişisel finans yönetimi uygulamasıdır. Özellikler şunları içerir:</p><ul><li>Gelir ve gider takibi</li><li>Bütçe oluşturma ve yönetimi</li><li>Tasarruf projeleri oluşturma</li><li>Finansal verileri dışa aktarma</li><li>Uygulama içi satın almalarla Premium özellikler</li></ul><h3>3. Hesap Gerekmez</h3><p>BudgetZen, kullanıcı kaydı, giriş bilgileri veya kişisel bilgiler gerektirmez. Tüm veriler cihazınızda kalır.</p><h3>4. Premium Özellikler ve Abonelikler</h3><h4>4.1 Mevcut Planlar</h4><ul><li><strong>Aylık Abonelik:</strong> 3.99 €/ay</li><li><strong>Yıllık Abonelik:</strong> 39.99 €/yıl (%20 tasarruf)</li><li><strong>Ömür Boyu Erişim:</strong> 149.99 € tek seferlik ödeme</li></ul><h4>4.2 Ödeme İşleme</h4><p>Tüm ödemeler Google Play Store tarafından işlenir. Ödeme bilgilerini işlemiyor veya saklamıyoruz.</p><h4>4.3 Abonelik Yönetimi</h4><p>Abonelikler, mevcut dönem sonundan en az 24 saat önce iptal edilmediği sürece otomatik olarak yenilenir. Abonelikleri Google Play Store → Abonelikler bölümünden yönetin.</p><h4>4.4 İade Politikası</h4><p>İadeler Google Play Store politikalarına tabidir. İade talepleri için Google Play Desteği ile iletişime geçin.</p><h3>5. Kullanıcı Sorumlulukları</h3><p>Şunları kabul edersiniz:</p><ul><li>BudgetZen'i kişisel, ticari olmayan amaçlarla kullanmak</li><li>Finansal verilerinizi korumak için cihazınızı güvende tutmak</li><li>Verilerinizin düzenli yedeklerini almak</li><li>Uygulamayı tersine mühendislik veya değiştirmeye çalışmamak</li></ul><h3>6. Veri ve Gizlilik</h3><p>Tüm veriler cihazınızda yerel olarak depolanır. Şunları YAPMAYIZ:</p><ul><li>Kişisel bilgileri toplamak</li><li>Verileri harici sunuculara iletmek</li><li>Analiz veya izleme araçları kullanmak</li><li>Verileri üçüncü taraflarla paylaşmak</li></ul><h3>7. Garanti Reddi</h3><p>BudgetZen "olduğu gibi" hiçbir garanti olmaksızın sağlanır. Şunları garanti etmiyoruz:</p><ul><li>Kesintisiz veya hatasız hizmet</li><li>Finansal hesaplamaların veya projeksiyonların doğruluğu</li><li>Cihaz arızası durumunda veri kurtarma</li></ul><h3>8. Sorumluluğun Sınırlandırılması</h3><p>BudgetZen ve geliştiricileri aşağıdakilerden sorumlu değildir:</p><ul><li>Uygulamayı kullanarak alınan finansal kararlar</li><li>Cihaz arızası veya kullanıcı hatası nedeniyle veri kaybı</li><li>İçe veya dışa aktarılan verilerdeki yanlışlıklar</li><li>Google Play Store satın alımlarıyla ilgili sorunlar</li></ul><h3>9. Fesih</h3><p>Bu şartları ihlal ederseniz uygulamaya erişimi sonlandırabilir veya askıya alabiliriz. Fesih durumunda Premium abonelikler iade edilmeyecektir.</p><h3>10. Şartlarda Değişiklik</h3><p>Bu şartları güncelleyebiliriz. Uygulamayı kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir.</p><h3>11. Geçerli Hukuk</h3><p>Bu şartlar, Avrupa Birliği yasalarına tabidir ve tüketici koruma yasalarına özel olarak dikkat edilir.</p><div class="contact-info"><h3>İletişim Bilgileri</h3><p>Bu şartlarla ilgili sorularınız için bize ulaşın:</p><p><strong>E-posta:</strong> sadek.jebly@gmail.com</p><p><strong>Web sitesi:</strong> <a href="https://sadokjabli.github.io/budgetzen-legal-pages/index.html">BudgetZen Yasal Sayfalar</a></p></div>`
+};
+function setLanguage(lang) {
+    document.getElementById('termsContent').innerHTML = termsHTML[lang];
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+        else btn.classList.remove('active');
+    });
+    localStorage.setItem('budgetzen_terms_lang', lang);
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const selector = document.getElementById('langSelector');
+    languages.forEach(lang => {
+        const btn = document.createElement('button');
+        btn.className = 'lang-btn';
+        btn.dataset.lang = lang;
+        btn.innerText = langNames[lang];
+        btn.addEventListener('click', () => setLanguage(lang));
+        selector.appendChild(btn);
+    });
+    let lang = new URLSearchParams(window.location.search).get('lang');
+    if (!lang || !termsHTML[lang]) lang = localStorage.getItem('budgetzen_terms_lang') || 'en';
+    if (!termsHTML[lang]) lang = 'en';
+    setLanguage(lang);
+});
+</script>
 </body>
 </html>
