@@ -1,264 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BudgetZen - Legal Documents</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        .logo {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .logo h1 {
-            color: #6366F1;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .logo p {
-            color: #6B7280;
-            font-size: 1.1em;
-        }
-        
-        .language-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
-            justify-content: center;
-        }
-        
-        .language-btn {
-            padding: 10px 20px;
-            background: #F3F4F6;
-            border: 2px solid #E5E7EB;
-            border-radius: 10px;
-            font-weight: 600;
-            color: #4B5563;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .language-btn:hover, .language-btn.active {
-            background: #6366F1;
-            color: white;
-            border-color: #6366F1;
-        }
-        
-        .documents {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .document-card {
-            background: #F9FAFB;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #E5E7EB;
-        }
-        
-        .document-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .document-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        
-        .document-card h2 {
-            color: #111827;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        
-        .document-card p {
-            color: #6B7280;
-            margin-bottom: 25px;
-            font-size: 0.95em;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #6366F1;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #4F46E5;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #6B7280;
-            font-size: 0.9em;
-            padding-top: 20px;
-            border-top: 1px solid #E5E7EB;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .documents {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo h1 {
-                font-size: 2em;
-            }
-        }
-        
-        .notice {
-            background: #FEF3C7;
-            border: 2px solid #F59E0B;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .notice h3 {
-            color: #92400E;
-            margin-bottom: 10px;
-        }
-        
-        .notice p {
-            color: #92400E;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetZen — Legal Documents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--brand:#5b4cdb;--brand-dark:#3d31b0;--brand-light:#ede9ff;--text:#111827;--muted:#6b7280;--border:#e5e7eb;--bg:#f8f9fc;--surface:#ffffff;}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Jost',sans-serif;color:var(--text);background:var(--bg);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;}
+
+    .card{background:var(--surface);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.12);max-width:760px;width:100%;overflow:hidden;}
+
+    /* HEADER BAND */
+    .card-header{background:linear-gradient(135deg,#4338ca 0%,#7c3aed 100%);padding:48px 40px 40px;text-align:center;position:relative;overflow:hidden;}
+    .card-header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;}
+    .logo-wrap{position:relative;display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);border:2px solid rgba(255,255,255,.3);border-radius:22px;font-size:36px;margin-bottom:24px;}
+    .card-header h1{font-family:'DM Serif Display',serif;font-size:2.4rem;font-weight:400;color:#fff;margin-bottom:8px;position:relative;letter-spacing:-.02em;}
+    .card-header p{color:rgba(255,255,255,.82);font-size:1rem;position:relative;}
+
+    /* NOTICE STRIP */
+    .notice{margin:0 40px;background:#fefce8;border:1.5px solid #fbbf24;border-radius:12px;padding:16px 20px;text-align:center;transform:translateY(-18px);box-shadow:0 4px 16px rgba(0,0,0,.06);}
+    .notice p{color:#78350f;font-size:.9rem;font-weight:500;}
+    .notice strong{font-weight:700;}
+
+    /* DOCS GRID */
+    .docs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:8px 40px 40px;}
+    @media(max-width:580px){.docs-grid{grid-template-columns:1fr;padding:8px 24px 32px;}.card-header{padding:36px 24px 32px;}.notice{margin:0 24px;}}
+
+    .doc-tile{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:32px 28px;text-align:center;transition:transform .25s,box-shadow .25s,border-color .25s;}
+    .doc-tile:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(91,76,219,.15);border-color:var(--brand);}
+    .tile-icon{font-size:2.8rem;margin-bottom:18px;display:block;}
+    .doc-tile h2{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;color:var(--text);margin-bottom:10px;}
+    .doc-tile p{color:var(--muted);font-size:.88rem;line-height:1.6;margin-bottom:24px;}
+    .doc-tile a{display:inline-block;padding:11px 28px;background:var(--brand);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;font-size:.9rem;transition:background .2s,transform .15s;letter-spacing:.01em;}
+    .doc-tile a:hover{background:var(--brand-dark);transform:scale(1.03);}
+
+    /* LANG BADGES */
+    .lang-badges{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:12px;}
+    .lang-badge{font-size:.75rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:3px 9px;color:var(--muted);}
+
+    /* FOOTER */
+    .card-footer{border-top:1px solid var(--border);padding:20px 40px;text-align:center;color:var(--muted);font-size:.82rem;}
+    .card-footer a{color:var(--brand);text-decoration:none;}
+    @media(max-width:580px){.card-footer{padding:20px 24px;}}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <h1>💰 BudgetZen</h1>
-            <p>Privacy Policy & Terms of Service</p>
-        </div>
-        
-        <div class="notice">
-            <h3>📱 100% Local Mobile App</h3>
-            <p>All data stays on your device • No accounts required • Premium features managed by Google Play</p>
-        </div>
-        
-        <div class="documents" id="documentsContainer">
-            <!-- dynamically filled by JS -->
-        </div>
-        
-        <div class="footer">
-            <p>© 2024 BudgetZen App • Contact: sadek.jebly@gmail.com</p>
-            <p style="margin-top: 10px; font-size: 0.8em;">
-                This website hosts legal documents for the BudgetZen mobile application.
-                To download the app, visit Google Play Store.
-            </p>
-        </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="logo-wrap">💰</div>
+      <h1>BudgetZen</h1>
+      <p>Privacy Policy &amp; Terms of Service — Legal Documents</p>
     </div>
 
-    <script>
-        const translations = {
-            en: { privacyTitle: "Privacy Policy", privacyDesc: "How BudgetZen protects your privacy and handles data (available in 10 languages)", privacyBtn: "Read Privacy Policy", termsTitle: "Terms of Service", termsDesc: "Terms and conditions for using BudgetZen app (available in 10 languages)", termsBtn: "Read Terms of Service" },
-            fr: { privacyTitle: "Politique de confidentialité", privacyDesc: "Comment BudgetZen protège votre vie privée et traite les données (disponible en 10 langues)", privacyBtn: "Lire la politique", termsTitle: "Conditions d'utilisation", termsDesc: "Conditions générales d'utilisation de l'application BudgetZen (disponible en 10 langues)", termsBtn: "Lire les conditions" },
-            de: { privacyTitle: "Datenschutzerklärung", privacyDesc: "Wie BudgetZen Ihre Privatsphäre schützt und Daten verarbeitet (verfügbar in 10 Sprachen)", privacyBtn: "Datenschutz lesen", termsTitle: "Nutzungsbedingungen", termsDesc: "Bedingungen für die Nutzung der BudgetZen-App (verfügbar in 10 Sprachen)", termsBtn: "Bedingungen lesen" },
-            es: { privacyTitle: "Política de privacidad", privacyDesc: "Cómo BudgetZen protege tu privacidad y maneja los datos (disponible en 10 idiomas)", privacyBtn: "Leer política", termsTitle: "Términos de servicio", termsDesc: "Términos y condiciones para usar la aplicación BudgetZen (disponible en 10 idiomas)", termsBtn: "Leer términos" },
-            it: { privacyTitle: "Informativa sulla privacy", privacyDesc: "Come BudgetZen protegge la tua privacy e gestisce i dati (disponibile in 10 lingue)", privacyBtn: "Leggi la privacy", termsTitle: "Termini di servizio", termsDesc: "Termini e condizioni per l'uso dell'app BudgetZen (disponibile in 10 lingue)", termsBtn: "Leggi i termini" },
-            pt: { privacyTitle: "Política de Privacidade", privacyDesc: "Como o BudgetZen protege sua privacidade e trata os dados (disponível em 10 idiomas)", privacyBtn: "Ler política", termsTitle: "Termos de serviço", termsDesc: "Termos e condições para usar o aplicativo BudgetZen (disponível em 10 idiomas)", termsBtn: "Ler termos" },
-            ja: { privacyTitle: "プライバシーポリシー", privacyDesc: "BudgetZenがどのようにプライバシーを保護しデータを扱うか（10言語対応）", privacyBtn: "プライバシーポリシーを読む", termsTitle: "利用規約", termsDesc: "BudgetZenアプリの利用条件（10言語対応）", termsBtn: "利用規約を読む" },
-            ar: { privacyTitle: "سياسة الخصوصية", privacyDesc: "كيف تحمي BudgetZen خصوصيتك وتتعامل مع البيانات (متوفر بـ 10 لغات)", privacyBtn: "اقرأ سياسة الخصوصية", termsTitle: "شروط الخدمة", termsDesc: "شروط وأحكام استخدام تطبيق BudgetZen (متوفر بـ 10 لغات)", termsBtn: "اقرأ الشروط" },
-            ko: { privacyTitle: "개인정보처리방침", privacyDesc: "BudgetZen이 개인정보를 보호하고 데이터를 처리하는 방법 (10개 언어 지원)", privacyBtn: "개인정보처리방침 읽기", termsTitle: "이용약관", termsDesc: "BudgetZen 앱 사용 약관 (10개 언어 지원)", termsBtn: "이용약관 읽기" },
-            tr: { privacyTitle: "Gizlilik Politikası", privacyDesc: "BudgetZen'in gizliliğinizi nasıl koruduğu ve verileri nasıl işlediği (10 dilde mevcuttur)", privacyBtn: "Gizlilik politikasını oku", termsTitle: "Hizmet Şartları", termsDesc: "BudgetZen uygulamasını kullanma koşulları (10 dilde mevcuttur)", termsBtn: "Şartları oku" }
-        };
-        
-        function setLanguage(lang) {
-            const t = translations[lang] || translations.en;
-            document.getElementById('documentsContainer').innerHTML = `
-                <div class="document-card">
-                    <div class="document-icon">🔒</div>
-                    <h2>${t.privacyTitle}</h2>
-                    <p>${t.privacyDesc}</p>
-                    <a href="privacy.html?lang=${lang}" class="btn">${t.privacyBtn}</a>
-                </div>
-                <div class="document-card">
-                    <div class="document-icon">📄</div>
-                    <h2>${t.termsTitle}</h2>
-                    <p>${t.termsDesc}</p>
-                    <a href="terms.html?lang=${lang}" class="btn">${t.termsBtn}</a>
-                </div>
-            `;
-            // Update active button style (if any)
-            document.querySelectorAll('.language-btn').forEach(btn => {
-                if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
-                else btn.classList.remove('active');
-            });
-            localStorage.setItem('budgetzen_legal_lang', lang);
-            const url = new URL(window.location);
-            url.searchParams.set('lang', lang);
-            window.history.replaceState({}, '', url);
-        }
-        
-        // Create language selector dynamically
-        const langSelector = document.createElement('div');
-        langSelector.className = 'language-selector';
-        const languages = ['en','fr','de','es','it','pt','ja','ar','ko','tr'];
-        const langNames = {
-            en:'🇬🇧 English', fr:'🇫🇷 Français', de:'🇩🇪 Deutsch', es:'🇪🇸 Español', it:'🇮🇹 Italiano',
-            pt:'🇵🇹 Português', ja:'🇯🇵 日本語', ar:'🇸🇦 العربية', ko:'🇰🇷 한국어', tr:'🇹🇷 Türkçe'
-        };
-        languages.forEach(lang => {
-            const btn = document.createElement('button');
-            btn.className = 'language-btn';
-            btn.setAttribute('data-lang', lang);
-            btn.textContent = langNames[lang];
-            btn.addEventListener('click', () => setLanguage(lang));
-            langSelector.appendChild(btn);
-        });
-        const notice = document.querySelector('.notice');
-        notice.parentNode.insertBefore(langSelector, notice.nextSibling);
-        
-        // Set initial language from URL or localStorage
-        let initialLang = new URLSearchParams(window.location.search).get('lang');
-        if (!initialLang || !translations[initialLang]) initialLang = localStorage.getItem('budgetzen_legal_lang') || 'en';
-        if (!translations[initialLang]) initialLang = 'en';
-        setLanguage(initialLang);
-    </script>
+    <div class="notice">
+      <p>📱 <strong>100% Local Mobile App</strong> &nbsp;·&nbsp; All data stays on your device &nbsp;·&nbsp; No accounts required &nbsp;·&nbsp; Premium via Google Play</p>
+    </div>
+
+    <div class="docs-grid">
+      <div class="doc-tile">
+        <span class="tile-icon">🔒</span>
+        <h2>Privacy Policy</h2>
+        <p>How BudgetZen protects your privacy and handles your data — available in 10 languages.</p>
+        <a href="privacy.html">Read Privacy Policy</a>
+        <div class="lang-badges">
+          <span class="lang-badge">🇬🇧 EN</span>
+          <span class="lang-badge">🇫🇷 FR</span>
+          <span class="lang-badge">🇩🇪 DE</span>
+          <span class="lang-badge">🇪🇸 ES</span>
+          <span class="lang-badge">🇮🇹 IT</span>
+          <span class="lang-badge">🇵🇹 PT</span>
+          <span class="lang-badge">🇯🇵 JA</span>
+          <span class="lang-badge">🇸🇦 AR</span>
+          <span class="lang-badge">🇰🇷 KO</span>
+          <span class="lang-badge">🇹🇷 TR</span>
+        </div>
+      </div>
+
+      <div class="doc-tile">
+        <span class="tile-icon">📄</span>
+        <h2>Terms of Service</h2>
+        <p>Terms and conditions for using the BudgetZen app — available in 10 languages.</p>
+        <a href="terms.html">Read Terms of Service</a>
+        <div class="lang-badges">
+          <span class="lang-badge">🇬🇧 EN</span>
+          <span class="lang-badge">🇫🇷 FR</span>
+          <span class="lang-badge">🇩🇪 DE</span>
+          <span class="lang-badge">🇪🇸 ES</span>
+          <span class="lang-badge">🇮🇹 IT</span>
+          <span class="lang-badge">🇵🇹 PT</span>
+          <span class="lang-badge">🇯🇵 JA</span>
+          <span class="lang-badge">🇸🇦 AR</span>
+          <span class="lang-badge">🇰🇷 KO</span>
+          <span class="lang-badge">🇹🇷 TR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <p>© 2026 BudgetZen App &nbsp;·&nbsp; <a href="mailto:sadek.jebly@gmail.com">sadek.jebly@gmail.com</a></p>
+      <p style="margin-top:6px">This website hosts legal documents for the BudgetZen mobile application. To download the app, visit Google Play Store.</p>
+    </div>
+  </div>
 </body>
 </html>
